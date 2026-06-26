@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 51, 65, 85; /* Slate 700 */
+  --background-start-rgb: 240, 253, 250; /* Mint Light (Teal 50) */
+  --background-end-rgb: 239, 246, 255; /* Sky Light (Blue 50) */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom right,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    no-repeat fixed;
+  min-height: 100vh;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+}
+
+/* 귀여운 동글동글한 느낌의 그림자 효과 */
+.soft-shadow {
+  box-shadow: 0 8px 30px rgba(165, 214, 167, 0.15);
+}
+
+.soft-shadow-blue {
+  box-shadow: 0 8px 30px rgba(144, 202, 249, 0.2);
+}
+
+.soft-shadow-yellow {
+  box-shadow: 0 8px 30px rgba(255, 245, 157, 0.25);
+}
+
+/* 탭 전환 시 부드러운 스케일 모션 */
+.tab-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 스크롤바 미려하게 꾸미기 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(165, 214, 167, 0.5); /* Mint Darkish */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(165, 214, 167, 0.8);
+}
